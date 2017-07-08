@@ -6,9 +6,19 @@
 </head>
 <body>
 <div>
-    <p>Home</p>
-    <a href="{% url 'list_name' time %}">查找Python的工作</a>
+    <a href="{% url 'list_name' 'Python' %}">查找Python的工作</a> <!-- 使用url的name参数匹配目标模板名，匹配项"Python"-->
 </div>
+<div>
+    <a href="{% url 'skill_name' %}">查找Java的工作</a> <!-- 使用url的name参数匹配目标模板名，匹配项"Java"-->
+</div>
+    <div><i>---------------------------</i></div>
+<li class="search">
+    <form action="/search" method="get" target="_blank" accept-charset="UTF-8">
+        <!--<input name="utf8" type="hidden" value="✓">-->
+        <input name="q" class="search-input" id="q" type="text" placeholder="搜索" value="">
+        <a>查找</a>
+    </form>
+</li>
 
 </body>
 </html>
